@@ -82,3 +82,13 @@ rm -rf %{buildroot}
 
 find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
+
+
+%changelog
+* Tue Nov 15 2011 Zé <ze@mandriva.org> 6.11.42-1
++ Revision: 730663
+- imported package libpgf
+
+
+* Thu Nov 15 2011 Zé <ze@mandriva.org> 6.11.42-1
+- first package
