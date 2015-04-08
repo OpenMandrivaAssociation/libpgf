@@ -1,4 +1,4 @@
-%define major 4
+%define major 6
 %define libname %mklibname pgf %{major}
 %define libnamedev %mklibname pgf -d
 
@@ -6,13 +6,14 @@
 Name:            libpgf
 Summary:         PGF (Progressive Graphics File) library
 Group:           System/Libraries
-Version:         6.11.42
-Release:         2
+Version:         6.14.12
+Release:         1
 License:         LGPLv2+
 URL:             http://www.libpgf.org
-Source0:         http://downloads.sourceforge.net/project/%{name}/%{version}/%{name}-%{version}-src.zip
+Source0:         http://downloads.sourceforge.net/project/%{name}/%{version}/%{name}-src-%{version}.tar.gz
 BuildRequires:   doxygen
 BuildRequires:   libtool
+BuildRequires:	dos2unix
 
 %description
 libPGF contains an implementation of the Progressive Graphics File (PGF)
@@ -72,23 +73,13 @@ for lossless and lossy compression.
 %setup -qn %{name}
 
 %build
-sh -x autogen.sh
-%{configure2_5x} --disable-static
-%{make}
+dos2unix configure.ac
+sh autogen.sh
+%configure 
+%make
 
 %install
-rm -rf %{buildroot}
-%{makeinstall_std}
+%makeinstall_std
 
-find %{buildroot} -name '*.la' -exec rm -f {} ';'
+#find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
-
-
-%changelog
-* Tue Nov 15 2011 Zé <ze@mandriva.org> 6.11.42-1
-+ Revision: 730663
-- imported package libpgf
-
-
-* Thu Nov 15 2011 Zé <ze@mandriva.org> 6.11.42-1
-- first package
