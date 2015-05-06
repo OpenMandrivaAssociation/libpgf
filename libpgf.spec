@@ -75,7 +75,7 @@ for lossless and lossy compression.
 %build
 dos2unix configure.ac
 sh autogen.sh
-%configure 
+%configure2_5x --disable-static
 %make
 
 %install
