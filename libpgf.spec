@@ -7,7 +7,7 @@ Name:            libpgf
 Summary:         PGF (Progressive Graphics File) library
 Group:           System/Libraries
 Version:         6.14.12
-Release:         2
+Release:         3
 License:         LGPLv2+
 URL:             http://www.libpgf.org
 Source0:         http://downloads.sourceforge.net/project/%{name}/%{version}/%{name}-src-%{version}.tar.gz
