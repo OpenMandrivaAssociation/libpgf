@@ -11,6 +11,11 @@ Release:         7
 License:         LGPLv2+
 URL:             https://www.libpgf.org
 Source0:         http://downloads.sourceforge.net/project/%{name}/%{version}/%{name}-src-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:   doxygen
 BuildRequires:   libtool
 BuildRequires:	dos2unix
